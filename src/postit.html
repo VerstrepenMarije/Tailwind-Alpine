@@ -4,43 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PostIt</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./stylename.css">
 </head>
-<body>
-<main>
-    <h1>Hallo from tailwind</h1>
-    <hr>
-    <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus dolorum fugiat fugit ipsam
-            placeat quod reprehenderit temporibus. Assumenda delectus, deleniti dignissimos doloribus, ducimus enim
+<body class="bg-gray-400">
+<main class="flex flex-col items-center justify-center mt-2 p-6">
+    <h1 class="text-4xl font-extrabold text-center text-red-900">Hallo from tailwind</h1>
+    <hr class="w-full max-w-md border-gray-300 my-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full
+                px-4 md:px-0                                     <!-- Responsive horizontal padding -->
+                border-4 border-red-800 rounded-xl               <!-- Dark red border and rounded corners -->
+                shadow-2xl shadow-red-900/50                     <!-- Shadow effect -->
+                p-6                                              <!-- Padding inside the container -->
+                bg-gradient-to-b from-white to-gray-300      <!-- Background for the container -->
+                ">
+        <p class="bg-gray-50 p-4 rounded-md text-blue-900 border border-gray-200 hover:text-pink-700 hover:cursor-not-allowed transition duration-200 ease-in-out
+                  shadow-sm hover:shadow-md hover:-rotate-3 hover:bg-green-200">placeat quod reprehenderit temporibus. Assumenda delectus, deleniti dignissimos doloribus, ducimus enim
             iusto nam
             placeat quae quia voluptas!</p>
-        <p>Aut consectetur deserunt dolore dolorem doloremque exercitationem fuga hic illo, inventore ipsa
+        <p class="bg-gray-50 p-4 rounded-md text-blue-900 border border-gray-200 hover:text-pink-700 hover:cursor-not-allowed transition duration-200 ease-in-out
+                  shadow-sm hover:shadow-md hover:rotate-3 hover:bg-amber-200">Aut consectetur deserunt dolore dolorem doloremque exercitationem fuga hic illo, inventore ipsa
             laboriosam modi molestiae mollitia possimus quam qui quibusdam quidem quis quisquam quo reiciendis repellat,
             similique tenetur ullam voluptatem.</p>
-        <p>Alias autem commodi consequuntur corporis deleniti doloremque eaque et eveniet ipsum numquam,
+        <p class="bg-gray-50 p-4 rounded-md text-blue-900 border border-gray-200 hover:text-pink-700 hover:cursor-not-allowed transition duration-200 ease-in-out
+                  shadow-sm hover:shadow-md hover:-rotate-6 hover:bg-blue-200">Alias autem commodi consequuntur corporis deleniti doloremque eaque et eveniet ipsum numquam,
             optio placeat praesentium quaerat quibusdam quis quos recusandae reprehenderit rerum, saepe sapiente totam
             vero
             voluptas? Expedita, voluptas, voluptates.</p>
-        <p>Accusantium animi cum cupiditate dolorum eius eligendi harum inventore iusto magni, minus,
+        <p class="bg-gray-50 p-4 rounded-md text-blue-900 border border-gray-200 hover:text-pink-700 hover:cursor-not-allowed transition duration-200 ease-in-out
+                  shadow-sm hover:shadow-md hover:rotate-3 hover:bg-amber-200">Accusantium animi cum cupiditate dolorum eius eligendi harum inventore iusto magni, minus,
             molestias officia quas sed soluta suscipit! Aut dolor dolore doloremque doloribus est inventore maiores
             molestias
             mollitia officia saepe?</p>
-        <p>A consequuntur, cupiditate dignissimos minus mollitia nobis quod. Aspernatur blanditiis error hic
+        <p class="bg-gray-50 p-4 rounded-md text-blue-900 border border-gray-200 hover:text-pink-700 hover:cursor-not-allowed transition duration-200 ease-in-out
+                  shadow-sm hover:shadow-md hover:rotate-15 hover:bg-lime-200">A consequuntur, cupiditate dignissimos minus mollitia nobis quod. Aspernatur blanditiis error hic
             ipsa quidem quod quos repellendus. Exercitationem facere itaque laboriosam magni molestias nesciunt quia.
             Aperiam
             cupiditate dolor ipsa rerum?</p>
-        <p>A ad assumenda blanditiis dolorem ea eum eveniet facere in inventore ipsum labore laboriosam
+        <p class="bg-gray-50 p-4 rounded-md text-blue-900 border border-gray-200 hover:text-pink-700 hover:cursor-not-allowed transition duration-200 ease-in-out
+                  shadow-sm hover:shadow-md hover:rotate-3 hover:bg-amber-200">A ad assumenda blanditiis dolorem ea eum eveniet facere in inventore ipsum labore laboriosam
             libero maiores necessitatibus nihil nisi nostrum obcaecati optio, possimus rem saepe sapiente sint soluta
             unde
             vero!</p>
-        <p>At eius harum inventore laborum odit quis, reprehenderit voluptas voluptatum? Atque aut earum enim
+        <p class="bg-gray-50 p-4 rounded-md text-blue-900 border border-gray-200 hover:text-pink-700 hover:cursor-not-allowed transition duration-200 ease-in-out
+                  shadow-sm hover:shadow-md hover:-rotate-5 hover:bg-orange-200">At eius harum inventore laborum odit quis, reprehenderit voluptas voluptatum? Atque aut earum enim
             itaque iure molestias pariatur quaerat quos repellat tenetur? Aut delectus, maxime necessitatibus repellat
-            suscipit totam vero.</p>
-        <p>Corporis culpa cupiditate ipsam laudantium quasi totam! Ad aspernatur aut et incidunt, ipsum
+        <p class="bg-gray-50 p-4 rounded-md text-blue-900 border border-gray-200 hover:text-pink-700 hover:cursor-not-allowed transition duration-200 ease-in-out
+                  shadow-sm hover:shadow-md hover:rotate-3 hover:bg-teal-200">Corporis culpa cupiditate ipsam laudantium quasi totam! Ad aspernatur aut et incidunt, ipsum
             perspiciatis quis tenetur vitae? Accusamus alias aspernatur aut dolorum fuga, id illo nobis provident
             ratione
-            temporibus. Porro.</p>
+            suscipit totam vero. temporibus. Porro.</p>
     </div>
 </main>
 </body>
