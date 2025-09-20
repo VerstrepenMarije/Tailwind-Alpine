@@ -4,23 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./stylename.css">
     <script defer src="./javascript/alpine3.14.1.min.js"></script>
 </head>
-<body>
-<div>
-    <h1>Alpine & Tailwind Todo list</h1>
-    <input id="search-input" placeholder="Search...">
+<body class="bg-blue-900 min-h-screen flex items-center justify-center p-35">
+<main class="bg-white rounded-md container mx-auto p-8">
+    <div
+            x-data="{
+        search: '',
+        newItem: '',
+        items: ['Learn Alpine.js', 'Build a Todo App', 'Master Livewire'],
 
-    <ul class="space-y-4">
+        get filteredItems() {
+            return this.items.filter(
+                item => item.toLowerCase().includes(this.search.toLowerCase())
+            );
+        },
 
-    </ul>
+        addItem() {
+            if (this.newItem.trim() !== '') {
+                this.items.push(this.newItem.trim());
+                this.newItem = ''; // Clear the input after adding
+            }
+        },
 
-    <div>
-        <input id="add-input" placeholder="Add a new item...">
-        <button>Add</button>
+        deleteItem(itemToDelete) {
+            this.items = this.items.filter(item => item !== itemToDelete);
+        }
+    }"
+    >
+        <h1 class="text-2xl font-bold text-center p-4">Alpine & Tailwind Todo list</h1>
+        <input
+                class="w-full p-3 border-2 border-gray-300 rounded-md my-3"
+                id="search-input"
+                placeholder="Search..."
+                x-model="search"
+        >
+
+        <ul class="space-y-4">
+            <template x-for="item in filteredItems" :key="item">
+                <li class="flex justify-between items-center bg-blue-300 p-3 rounded-md text-blue-900 hover:bg-blue-600 hover:text-white hover:border-2 hover:border-blue-900 hover:p-4 hover:cursor-pointer transition duration-300 ease-in-out">
+                    <span x-text="item"></span>
+                    <button
+                            x-on:click="deleteItem(item)"
+                            class="text-red-600 hover:text-red-800 font-bold"
+                    >
+                        &times;
+                    </button>
+                </li>
+            </template>
+            <p x-show="filteredItems.length === 0" class="text-gray-500 text-center">No items found.</p>
+        </ul>
+
+        <div class="mt-6">
+            <input
+                    class="w-full p-3 border-2 border-gray-300 rounded-md mb-3"
+                    id="add-input"
+                    placeholder="Add a new item..."
+                    x-model="newItem"
+                    x-on:keydown.enter="addItem()"
+            >
+            <button
+                    class="bg-blue-800 text-white p-3 rounded-md w-full"
+                    x-on:click="addItem()"
+            >
+                Add
+            </button>
+        </div>
     </div>
-</div>
-
+</main>
 </body>
 </html>
